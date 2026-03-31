@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seu Camarada na entrega!</title>
+ 
+<!--BARRA SUPERIOR DE NAVEGAÇÃO/navigate bar-->
+<div> <!-- Descobri que essa 'div' separa a cor da barra de nav; se tirá-la, a página inteira fica roxa. Ela estava ao final dos 'href' porque tentei fazer um experimento mas não obtive sucesso. A partir daí, tanto a div
+começando/terminando lá embaixo, como começando em cima (aqui) e terminando embaixo separam a cor.-->
+<nav style="background-color: rgb(255, 255, 255); font-family: Arial; border-radius: 9%
+style="font-family: Arial; font-size: 16;
+>
+
+<h2>@camarada</h2>
+<a href="Link">Quem somos nós?</a>
+<a href="Link">Contato</a>
+<a href=""Link"> Quero entrar na minha conta </a>
+<a href="GoPaginaLogin.html"
+<button onclick="Cadastro()"> Quero me cadastrar </button>
+</nav>
+
+
+
+</div>
+</header>  
+<style>
+body { font-family: Verdana; margin:20px; background-color: rgb(163, 83, 238);}
+ .page { font-family: times new roman; display:none; padding: 20px; }
+ .active { display:block; }
+
+
+ button
+ {
+ 
+ padding: 8px;
+  border-radius: 15px;
+  border: 2px solid orange;
+ }
+
+
+
+
+.img_center {
+display: block;
+margin-right: auto;
+margin-left: auto;
+max-width: 10%;
+
+
+
+
+}
+
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+
+
+
+
+
+
+
+
+
+<!--IMAGEM PROPAGANDA- Pq colocar dentro do head e não dentro do body?! Por causa da minha dúvida, coloquei dentro do body-->
+
+
+<img class="img_center" src="propagandacamarada.avif" alt="Dois camaradas entregando e recebendo encomenda">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- LOGIN -->
+
+
+ <div id="login" class="page active">
+    <h2>Login</h2>
+    <input type="text" placeholder="Digite aqui seu CPF"><br><br>
+    <input type="password" placeholder="Digite aqui sua senha"><br><br>
+    <button onclick="Cadastro()">Cadastrar</button>
+  </div>
+
+
+
+
+  <div id="criarconta" class="page active"></div>
+   <h2>É novo aqui? Crie sua conta já!</h2>
+   <button>Criar conta</button>
+
+
+
+
+  <!-- ACHAR PARCEIROS -->
+  <div id="parceiros" class="page active">
+    <h2>Achar Parceiros</h2>
+    <p>Lista de parceiros...</p>
+  </div>
+
+
+  <!-- CADASTRO ENCOMENDAS -->
+  <div id="encomendas" class="page">
+    <input placeholder="Nome do Produto"><br><br>
+    <button>Salvar</button>
+   
+  </div>
+
+
+
+
+
+
+  <script>
+  function login() {
+    document.getElementById('login').classList.remove('active');
+    document.getElementById('landing').classList.add('active');
+    document.getElementById('menu').style.display = 'flex';
+
+
+    }
+
+
+  function navigate(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+  }
+
+
+function Cadastro() {
+
+
+window.location.href ="GoPaginaLogin.html";
+
+
+
+
+}
+       
+       
+</script>
+
+
+
+
+
+
+</body>
+</html>
